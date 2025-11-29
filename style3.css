@@ -1,0 +1,121 @@
+/* ================================================= */
+/* 1. LAYOUT PRINCIPAL DE EMPRESAS                   */
+/* ================================================= */
+
+/* La sección principal utiliza la misma estructura de tarjeta que la Home */
+.seccion-principal-empresas {
+    /* No necesitamos redefinir .presentacion, usa la definición de style.css */
+    /* Usamos el contenedor principal para asegurar que el estilo se aplica */
+    max-width: 1200px; 
+    margin: 2rem auto;
+}
+
+/* Redefinición de botones específicos para esta página */
+.cta-principal {
+    background-color: var(--color-accion-linkedin);
+    color: var(--color-texto-claro) !important;
+    border-color: var(--color-accion-linkedin);
+}
+.cta-principal:hover {
+    background-color: #005f99;
+}
+
+.cta-secundario {
+    background-color: var(--color-fondo-base);
+    color: var(--color-accion-linkedin) !important;
+    border-color: var(--color-accion-linkedin);
+}
+.cta-secundario:hover {
+    background-color: var(--color-fondo-alternativo); 
+}
+
+/* ================================================= */
+/* 2. SECCIÓN DE PLANES Y PRECIOS                    */
+/* ================================================= */
+.seccion-fuerte {
+    background-color: var(--color-principal-marca); /* Fondo Azul Marino para contraste */
+    color: var(--color-texto-claro);
+    padding: 4% 10%;
+    text-align: center;
+}
+
+.planes-titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2rem;
+    color: var(--color-texto-claro);
+    margin-bottom: 0.5rem;
+}
+
+.planes-subtitulo {
+    font-size: 1.1rem;
+    color: #DDDDDD; 
+    margin-bottom: 2.5rem;
+}
+
+.planes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    flex: 1;
+    background-color: var(--color-fondo-base);
+    color: var(--color-texto-oscuro);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-destacado {
+    border: 3px solid var(--color-accion-linkedin); 
+    transform: scale(1.03); 
+}
+
+.plan-card h3 {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-principal-marca);
+}
+
+.precio {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accion-linkedin);
+    margin-bottom: 1.5rem;
+}
+
+.plan-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.plan-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--color-borde-suave);
+}
+
+.btn-plan {
+    margin-top: auto; 
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+/* ================================================= */
+/* 3. RESPONSIVIDAD ESPECÍFICA                       */
+/* ================================================= */
+@media(max-width: 800px) {
+    .planes-grid {
+        flex-direction: column;
+    }
+}

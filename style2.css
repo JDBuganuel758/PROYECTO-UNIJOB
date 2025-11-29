@@ -1,0 +1,174 @@
+/* ================================================= */
+/* ESTILOS ESPECÍFICOS PARA LOGIN Y REGISTRO (style2.css) */
+/* Este archivo ASUME que style1.css (con variables y body flex) ya fue cargado */
+/* ================================================= */
+
+/* 1. LAYOUT PRINCIPAL DE LOGIN (Centrado) */
+.login-main {
+    flex-grow: 1; /* Permite que ocupe todo el espacio restante verticalmente */
+    display: flex; 
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    padding: 2rem 5%;
+}
+
+/* 2. ESTILO DE LA TARJETA BLANCA Y CONTENEDOR */
+.login-container {
+    width: 100%;
+    max-width: 450px; 
+    background-color: var(--color-fondo-base); /* Fondo blanco */
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-borde-suave);
+}
+
+/* 3. VISIBILIDAD Y ESTILO DE FORMULARIOS */
+.login-form {
+    display: none; /* CLAVE: Oculta todos por defecto */
+    flex-direction: column;
+    gap: 1rem;
+}
+.login-form.active {
+    display: flex; /* CLAVE: Muestra el formulario activo */
+}
+
+/* 4. ESTILOS DE TÍTULOS Y SUBTÍTULOS */
+.registro-titulo {
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    color: var(--color-principal-marca);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.registro-subtitulo {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 5. ESTILO DE INPUTS Y SELECTORES (Ancho completo) */
+.login-form input, 
+.login-form select {
+    width: 100%; /* CLAVE: Ocupa todo el ancho */
+    box-sizing: border-box; 
+    padding: 0.8rem;
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-base);
+}
+
+/* 6. ESTILOS DE BOTONES DE ROL Y PESTAÑA (Tabs) */
+.login-rol-selector {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 1.5rem; 
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 2rem; 
+    overflow: hidden;
+}
+.login-tabs {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 1.5rem; 
+    border-bottom: 1px solid var(--color-borde-suave);
+}
+.btn-rol, .btn-tab {
+    flex: 1; 
+    background: none; 
+    border: none; 
+    padding: 0.7rem; 
+    cursor: pointer;
+    font-size: 0.95rem; 
+    font-weight: 600; 
+    color: var(--color-texto-oscuro);
+    transition: all 0.3s ease;
+}
+.btn-rol.active {
+    background-color: var(--color-principal-marca); 
+    color: var(--color-texto-claro);
+    border: 1px solid var(--color-principal-marca);
+}
+.btn-tab.active {
+    color: var(--color-accion-linkedin); 
+    border-bottom: 2px solid var(--color-accion-linkedin);
+    margin-bottom: -1px;
+}
+
+/* 7. OTROS ESTILOS DEL FORMULARIO */
+
+.btn-submit { /* Botón principal de submit */
+    padding: 0.8rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+.link-forgot-password {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-accion-linkedin);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: block;
+}
+.link-forgot-password:hover {
+    text-decoration: underline;
+}
+.social-login {
+    display: flex;
+    gap: 1rem;
+}
+.btn-social {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 0.5rem;
+    background-color: var(--color-fondo-base);
+    color: var(--color-texto-oscuro);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-social:hover {
+    background-color: var(--color-fondo-alternativo);
+}
+.terms-text {
+    font-size: 0.85rem;
+    color: var(--color-texto-gris);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Reglas opcionales de Responsividad para Login */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 1.5rem;
+        border-radius: 0; 
+        box-shadow: none; 
+        border: none;
+    }
+    .login-rol-selector {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn-rol {
+        width: 100%;
+        border: 1px solid var(--color-borde-suave);
+    }
+    .login-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .btn-tab {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+}

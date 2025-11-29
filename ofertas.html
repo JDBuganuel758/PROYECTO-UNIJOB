@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Buscar Ofertas de Empleo y Prácticas | UniJob</title>
+    <meta name="description" content="Explora miles de ofertas de prácticas y primeros empleos filtradas por carrera, universidad y ubicación en UniJob.">
+    <link rel="stylesheet" href="style1.css"> 
+    <link rel="stylesheet" href="style5.css"> 
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header-logo">UniJob</a> 
+        <nav class="header-menu" aria-label="Navegación principal"> 
+            <a class="header-menu-link" href="ofertas.html"> Buscar Ofertas</a>
+            <a class="header-menu-link" href="empresas.html"> Para Empresas</a>
+            <a class="header-menu-link" href="recursos.html"> Recursos</a>
+            <a class="header-menu-link cta-login" href="login.html"> Acceder / Registrarse</a>
+        </nav>
+    </header>
+
+    <main class="ofertas-main"> 
+        
+        <aside class="filtro-sidebar">
+            <div class="filtro-card">
+                <h2>🔍 Filtrar Oportunidades</h2>
+                
+                <form class="busqueda-form">
+                    <input type="text" placeholder="Cargo, empresa o habilidad" class="input-busqueda">
+                    <button type="submit" class="btn-buscar">Buscar</button>
+                </form>
+                
+                <div class="filtro-grupo">
+                    <h3>Tipo de Empleo</h3>
+                    <label><input type="checkbox" name="tipo" value="practica"> Prácticas / Pasantías</label>
+                    <label><input type="checkbox" name="tipo" value="part-time"> Part-Time</label>
+                    <label><input type="checkbox" name="tipo" value="full-time"> Primer Empleo (Full-Time)</label>
+                </div>
+
+                <div class="filtro-grupo">
+                    <h3>Carrera/Área</h3>
+                    <select class="input-select">
+                        <option value="">Todas las áreas</option>
+                        <option value="ingenieria">Ingeniería y Tecnología</option>
+                        <option value="diseno">Diseño y Creatividad</option>
+                        <option value="marketing">Marketing y Comunicación</option>
+                        <option value="administracion">Administración y Finanzas</option>
+                    </select>
+                </div>
+
+                <div class="filtro-grupo">
+                    <h3>Ubicación</h3>
+                    <input type="text" placeholder="Ciudad o País" class="input-select">
+                </div>
+
+                <button class="btn-limpiar">Limpiar Filtros</button>
+            </div>
+        </aside>
+
+        <section class="resultados-listado">
+            <h1 class="resultados-titulo">Ofertas Destacadas para Universitarios</h1>
+            <p class="resultados-conteo">Mostrando 1-10 de 150 oportunidades encontradas.</p>
+            
+            <article class="oferta-card">
+                <div class="oferta-header">
+                    <h2 class="oferta-titulo">Práctica Remunerada en Desarrollo Front-End</h2>
+                    <span class="oferta-tipo">Práctica</span>
+                </div>
+                <p class="oferta-empresa">TechInnovate Solutions</p>
+                <p class="oferta-ubicacion">Remoto (Latinoamérica)</p>
+                <p class="oferta-resumen">Buscamos estudiantes de últimos ciclos de Ingeniería de Sistemas o afines con manejo de React y CSS. Ideal para aplicar conocimientos académicos.</p>
+                <div class="oferta-footer">
+                    <a href="#" class="btn-ver-detalle">Ver Detalle</a>
+                    <span class="oferta-fecha">Publicado hace 3 horas</span>
+                </div>
+            </article>
+
+            <article class="oferta-card">
+                <div class="oferta-header">
+                    <h2 class="oferta-titulo">Asistente de Marketing Digital y Redes</h2>
+                    <span class="oferta-tipo">Part-Time</span>
+                </div>
+                <p class="oferta-empresa">Agencia Creativa Global</p>
+                <p class="oferta-ubicacion">Ciudad de México, México</p>
+                <p class="oferta-resumen">Oportunidad para estudiante de Comunicación o Marketing. Gestión de campañas de redes sociales y creación de contenido visual.</p>
+                <div class="oferta-footer">
+                    <a href="#" class="btn-ver-detalle">Ver Detalle</a>
+                    <span class="oferta-fecha">Publicado hace 1 día</span>
+                </div>
+            </article>
+
+            <div class="paginacion">
+                <a href="#">Anterior</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">Siguiente</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer"> 
+        <p>© 2025 UniJob. Todos los derechos reservados.</p>
+        <p><a href="terminos.html">Términos y Condiciones</a> | <a href="privacidad.html">Política de Privacidad</a></p>
+    </footer>
+    <script>src= "ofertas-filtros.js"</script>
+</body>
+</html>

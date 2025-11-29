@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso y Registro | UniJob</title>
+    <meta name="description" content="Inicia sesión o regístrate en UniJob como estudiante o empresa para acceder a ofertas y talentos.">
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="stylesheet" href="style2.css"> 
+</head>
+<body class="login-body">
+    
+    <header class="header login-header">
+        <a href="index.html" class="header-logo">UniJob</a> 
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            
+            <div class="login-rol-selector">
+                <button class="btn-rol active" data-rol="estudiante">🎓 Soy Estudiante</button>
+                <button class="btn-rol" data-rol="empresa">💼 Soy Empresa</button>
+            </div>
+            
+            <div class="login-tabs">
+                <button class="btn-tab active" data-tab="login">Iniciar Sesión</button>
+                <button class="btn-tab" data-tab="register">Registrarse</button>
+            </div>
+
+            <form id="form-login-estudiante" class="login-form active" data-rol="estudiante" data-tab="login">
+                <h2 class="registro-titulo">Acceso Estudiante</h2>
+                <input type="email" placeholder="Correo electrónico universitario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-submit cta-principal">Entrar a UniJob</button>
+                <a href="#" class="link-forgot-password">¿Olvidaste tu contraseña?</a>
+                <p class="social-text">O continúa con</p>
+                <div class="social-login"><button class="btn-social">Google</button><button class="btn-social">LinkedIn</button></div>
+            </form>
+
+            <form id="form-register-estudiante" class="login-form" data-rol="estudiante" data-tab="register">
+                <h2 class="registro-titulo">Registro Estudiante</h2>
+                <p class="registro-subtitulo">Completa tus datos para empezar a buscar tu primera oportunidad laboral.</p>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico universitario" required>
+                <input type="password" placeholder="Crear contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required>
+                <select required><option value="">Selecciona tu universidad</option></select>
+                <select required><option value="">Selecciona tu carrera/área</option></select>
+                <button type="submit" class="btn-submit cta-principal">Crear Cuenta y Continuar</button>
+                <p class="terms-text">Al registrarte, aceptas nuestros <a href="terminos.html">Términos y Condiciones</a>.</p>
+            </form>
+
+            <form id="form-login-empresa" class="login-form" data-rol="empresa" data-tab="login">
+                <h2 class="registro-titulo">Acceso Empresas</h2>
+                <input type="email" placeholder="Correo del administrador" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-submit cta-principal">Entrar a la Plataforma</button>
+                <a href="#" class="link-forgot-password">¿Olvidaste tu contraseña?</a>
+            </form>
+            
+            <form id="form-register-empresa" class="login-form" data-rol="empresa" data-tab="register">
+                <h2 class="registro-titulo">Registro Empresa</h2>
+                <input type="text" placeholder="Nombre de la empresa" required>
+                <input type="text" placeholder="Correo de contacto (corporativo)" required>
+                <input type="password" placeholder="Crear contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required>
+                <button type="submit" class="btn-submit cta-principal">Registrar Empresa</button>
+                <p class="terms-text">Al registrarte, aceptas nuestros <a href="terminos.html">Términos y Condiciones</a>.</p>
+            </form>
+            
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

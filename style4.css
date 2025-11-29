@@ -1,0 +1,142 @@
+/* Este archivo depende de style.css para las variables de color y tipografía */
+
+/* ================================================= */
+/* 1. LAYOUT DE RECURSOS (recursos.html)             */
+/* ================================================= */
+.recursos-main {
+    padding: 2rem 10%;
+    max-width: 1400px; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Título Principal */
+.recursos-hero-section {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-borde-suave);
+    margin-bottom: 1.5rem;
+}
+
+.recursos-titulo {
+    font-family: var(--fuente-krona);
+    font-size: 2.2rem;
+    color: var(--color-principal-marca);
+    margin-bottom: 0.5rem;
+}
+
+.recursos-subtitulo {
+    font-size: 1.1rem;
+    color: var(--color-texto-oscuro);
+}
+
+
+/* ================================================= */
+/* 2. NAVEGACIÓN DE CATEGORÍAS                       */
+/* ================================================= */
+.recursos-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-categoria {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-base);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-categoria:hover {
+    background-color: var(--color-fondo-alternativo);
+    border-color: var(--color-accion-linkedin);
+}
+
+.btn-categoria.active {
+    background-color: var(--color-principal-marca);
+    color: var(--color-texto-claro);
+    border-color: var(--color-principal-marca);
+}
+
+
+/* ================================================= */
+/* 3. LISTADO DE RECURSOS (Tarjetas)                 */
+/* ================================================= */
+.recursos-listado {
+    /* Utiliza el mismo layout de flexbox que .valor-cards de style.css */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 4 columnas en desktop */
+    gap: 20px;
+    padding: 0;
+}
+
+.recurso-card {
+    /* Hereda de .valor-card (style.css), pero añadimos estilos específicos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid #FFC300;
+}
+
+.recurso-card h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--fuente-montserrat);
+    font-weight: 700;
+    color: var(--color-principal-marca);
+}
+
+.recurso-card p {
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio para alinear botones */
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.recurso-tipo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accion-linkedin);
+    background-color: rgba(0, 119, 181, 0.1); /* Azul muy suave */
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.btn-acceso-recurso {
+    /* Utiliza los estilos cta-principal y cta-secundario de style.css */
+    text-align: center;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    margin-top: auto; 
+}
+
+
+/* ================================================= */
+/* 4. RESPONSIVIDAD ESPECÍFICA                       */
+/* ================================================= */
+@media(max-width: 768px) {
+    .recursos-main {
+        padding: 1.5rem 5%;
+    }
+    .recursos-listado {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columnas en tabletas */
+    }
+    .recursos-titulo {
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .recursos-listado {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}

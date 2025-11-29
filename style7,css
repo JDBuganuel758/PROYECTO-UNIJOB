@@ -1,0 +1,70 @@
+/* ================================================= */
+/* ESTILOS ESPECÍFICOS PARA PÁGINAS LEGALES (Terminos y Privacidad) */
+/* Este archivo ASUME que style1.css ya fue cargado con todas las variables */
+/* ================================================= */
+
+.legal-main {
+    /* Centra la sección de contenido principal */
+    display: flex;
+    justify-content: center;
+    padding: 2rem 10%;
+    min-height: 70vh; /* Asegura que el footer esté abajo si el contenido es corto */
+}
+
+.legal-container {
+    width: 100%;
+    max-width: 900px; /* Ancho cómodo para lectura profesional */
+    background-color: var(--color-fondo-base); /* Fondo blanco */
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05);
+    
+    /* Propiedades de texto para formalidad */
+    line-height: 1.6; /* Espaciado cómodo entre líneas */
+    text-align: justify; /* Justifica el texto */
+    color: var(--color-texto-oscuro);
+}
+
+.legal-container h1 {
+    font-family: var(--fuente-krona);
+    font-size: 2rem;
+    color: var(--color-principal-marca);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.legal-container h2 {
+    font-size: 1.5rem;
+    color: var(--color-principal-marca);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+}
+
+.legal-container h3 {
+    font-size: 1.2rem;
+    color: var(--color-accion-linkedin);
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.legal-container p, .legal-container ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.legal-container ul {
+    list-style-position: inside; /* Mueve los puntos de lista dentro del contenido */
+    padding-left: 1rem;
+}
+
+.legal-container li {
+    margin-bottom: 0.5rem;
+}
+
+.fecha-revision {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2rem;
+}
